@@ -35,5 +35,5 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 plugin :tmp_restart
 
 # ここから追加
-workers ENV.fetch("WEB_CONCURRENCY") { 2 }
-preload_app!
+#workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+#preload_app!
