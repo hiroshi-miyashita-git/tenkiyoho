@@ -1,0 +1,14 @@
+ <head>
+ <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+ </head>
+ <%= form_tag(tenkiyoho_path, method: :get) do %>
+ <%= select_tag 'prefecture_code',
+                 options_from_collection_for_select(@prefecture.map { |doc| [doc['name'], doc['code']] }, 'last', 'first', @initial_value),
+                 prompt: '都道府県',
+                 class: 'py-2.5 px-0 w-36 text-base text-black bg-transparent border-0 border-b-2 border-blue-600 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer' %>
+ <%= submit_tag '選択', class: 'py-2.5 px-5 me-2 mb-2 text-base font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700' %>
+ <% end %>
+ <% if @text.present? %>
+   <p><%= @target_area %>の天気予報（<%= @report_datetime %> <%= @publishing_office %>発表）</p>
+   <p><%= @text.html_safe %></p>
+ <% end %>

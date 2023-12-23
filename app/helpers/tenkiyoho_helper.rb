@@ -1,0 +1,2 @@
+module TenkiyohoHelper
+end

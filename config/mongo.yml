@@ -1,0 +1,4 @@
+development:
+  uri: <%= ENV['MONGODB_URI'] %>
+production:
+  uri: <%= ENV['MONGODB_URI'] %>

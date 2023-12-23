@@ -1,0 +1,13 @@
+* {
+   font-family      : 'Roboto','Helvetica','Arial',sans-serif; /*'Noto Serif JP','JetBrains Mono', 'Source Code Pro',sans-serif;  */ 
+   padding-top      : 5px;
+   padding-left     : 5px;
+   /*background       : white; /* #EFEFEF;*/
+ }
+ p {
+   white-space      : pre-wrap;
+   word-wrap        : break-word;
+ }
+ .form-width {
+   width            : 150px;
+ }
