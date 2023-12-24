@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   #get 'tenkiyoho/index'
+  get '/',to: 'tenkiyoho#index'
   get '/tenkiyoho', to: 'tenkiyoho#index', as: :tenkiyoho
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
